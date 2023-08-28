@@ -25,7 +25,7 @@ function Projects({ projects }) {
       <div className="container" style={{ height: '100%' }}>
         <div className={styles['title']}>ALL PROJECTS</div>
         <div className={`${styles['content']} row`}>
-          {list.map((l, i) => (i >= ((current * perPage) - perPage) && i < current * perPage) && (
+          {list?.map((l, i) => (i >= ((current * perPage) - perPage) && i < current * perPage) && (
             <Link key={l.name} href={`/project/${l._id}`} style={`${styles['items']} col`}>
               <div
                 className={styles['item-container']}
@@ -53,7 +53,7 @@ function Projects({ projects }) {
             </Link>
           ))}
         </div>
-        {list.length > perPage && (
+        {list?.length > perPage && (
           <Pagination
             list={list}
             current={current}
