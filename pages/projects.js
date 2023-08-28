@@ -13,7 +13,7 @@ function Projects({ projects }) {
     <div className={styles['container']}>
       <HeadMeta
         title="Projects - Gallaria"
-        desc="INTELLIGENT BATHROOMS BY GALLARIA"
+        desc="INTELLIGENT BATHROOMS BY GALLA"
         keywords=""
         robots="index, follow"
         url="https://www.gallaria.com.au/enquiry"
