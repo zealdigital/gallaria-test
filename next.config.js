@@ -15,9 +15,9 @@ module.exports = withImages({
   images: {
     domains: [process.env.NEXT_PUBLIC_MEDIA_URL]
   },
-  future: {
-    webpack5: false,
-  },
+  // future: {
+  //   webpack5: false,
+  // },
   reactStrictMode: false,
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
