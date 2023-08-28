@@ -1,0 +1,143 @@
+.dropdown-underline {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 0.5px solid $primary;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+
+  > img {
+    width: 11px;
+    transform: rotate(0);
+    transition: all 0.2s linear;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-items {
+    max-height: 200px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.5s ease;
+    height: 0;
+      
+    &.opened {
+      height: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #D3D3D3; 
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #858585; 
+    }
+
+    .item {
+      min-width: 180px;
+      border-bottom: 0.25px solid #939393;
+      padding: 6px 0;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  }
+}
+
+.dropdown-underline-form {
+  cursor: pointer;
+  width: 80%;
+  border-bottom: 0.5px solid $primary;
+  padding-bottom: 11px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (max-width: $md-max) {
+    width: 100%;
+    font-size: 12px;
+  }
+
+  > img {
+    width: 11px;
+    transform: rotate(0);
+    transition: all 0.2s linear;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+    margin-bottom: 65px;
+
+    @media screen and (max-width: $md-max) {
+      margin-bottom: 50px;
+    }
+  } 
+
+  &-items {
+    position: absolute;
+    width: 80%;
+    background-color: $secondary;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.5s ease;
+    height: 0;
+    z-index: 1;
+
+    @media screen and (max-width: $md-max) {
+      width: 100%;
+    }
+      
+    &.opened {
+      height: 222px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #D3D3D3; 
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #858585; 
+    }
+
+    .item {
+      min-width: 100%;
+      color: #717171;
+      border-bottom: 0.25px solid #939393;
+      padding: 6px 0;
+      cursor: pointer;
+
+      @media screen and (max-width: $md-max) {
+        font-size: 12px;
+      }
+    }
+  }
+}

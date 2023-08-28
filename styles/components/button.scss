@@ -1,0 +1,57 @@
+.button-contained {
+  border-radius: 5px;
+  border: 0;
+  padding: 13px 0;
+  text-align: center;
+  width: 100%;
+  background: $grey;
+  color: $text-secondary;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 5px;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #cccccc;
+  }
+
+  @media screen and (max-width: $md-max) {
+    font-size: 0.75rem;
+    line-height: 14.65px;
+  }
+
+  &.white {
+    background: $secondary;
+    color: $text-primary;
+  }
+}
+
+.button-outlined {
+  border-radius: 5px;
+  border: 0;
+  background-color: transparent;
+  padding: 13px 0;
+  text-align: center;
+  width: 100%;
+  color: $grey;
+  border: 1px solid $grey;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 5px;
+  cursor: pointer;
+
+  &:disabled {
+    border: 1px solid#cccccc;
+    color: #cccccc;
+  }
+
+  @media screen and (max-width: $md-max) {
+    font-size: 0.75rem;
+    line-height: 14.65px;
+  }
+
+  &.white {
+    color: $text-secondary;
+    border: 1px solid $text-secondary;
+  }
+}

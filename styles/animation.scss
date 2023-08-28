@@ -1,0 +1,15 @@
+//animation keyframes
+
+@keyframes bounce {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(10px); }
+  100% { transform: translateY(0px); }
+}
+
+.show-opacity {
+  opacity: 1 !important;
+}
+
+.show-from-y {
+  transform: translateY(0) !important;
+}

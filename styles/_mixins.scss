@@ -1,0 +1,61 @@
+// screen sizes
+$xs-max: 575px;
+$sm-max: 767px;
+$md-min: 768px;
+$md-max: 991px;
+$lg-min: 992px;
+$lg-max: 1199px;
+
+// colors
+$primary: rgba(26,26,26,1);
+$primary-light: rgba(26,26,26,0.3);
+$primary-header: rgba(26,26,26,0.6);
+$primary-blur: rgba(26,26,26,0.8);
+$primary-dark: rgba(26,26,26,0.93);
+$secondary: rgba(255,255,255,1);
+$secondary-light: rgba(255,255,255,0.3);
+$secondary-blur: rgba(255,255,255,0.9);
+$error: #FF6A03;
+$grey: rgba(63,63,63,1);
+$grey-light: rgba(63,63,63,0.3);
+$grey-lighter: rgba(211,211,211,1);
+$grey-lighter-light: rgba(211,211,211,0.3);
+$footer: #F4F4F4;
+$text-primary: rgba(26,26,26,1);
+$text-secondary: #FFFFFF;
+$text-caption: #8386AD;
+$text-input-border: #D8D8D8;
+
+// fonts
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue-Light.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue-Regular.ttf");
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue-Medium.otf");
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/fonts/HelveticaNeue-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+

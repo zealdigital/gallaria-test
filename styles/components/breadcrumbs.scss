@@ -1,0 +1,44 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  padding-top: 46px;
+  padding-bottom: 46px;
+
+  @media screen and (max-width: $md-max) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .slash {
+      display: none;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  a {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 12.21px;
+    letter-spacing: 0.05rem;
+
+    @media screen and (max-width: $md-max) {
+      font-size: 10px;
+    }
+
+    img {
+      height: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .slash {
+    margin: 0 7.37px;
+  }
+
+  span {
+    font-size: 0.85rem;
+    line-height: 11.93px;
+  }
+}

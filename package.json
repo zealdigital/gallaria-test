@@ -1,11 +1,14 @@
 {
-  "name": "gallaria-new-nextjs",
+  "name": "gallaria-nextjs13",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "gen-media": "node generate-media.js",
+    "postbuild": "next-sitemap --config gen-sitemap.js",
+    "export": "next build && next export && yarn gen-media && yarn postbuild",
     "lint": "next lint"
   },
   "dependencies": {
@@ -16,6 +19,35 @@
     "postcss": "8.4.28",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.3"
+    "sass": "^1.66.1",
+    "tailwindcss": "3.3.3",
+    "@fullpage/react-fullpage": "^0.1.19",
+    "animejs": "^3.2.1",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "file-system": "^2.2.2",
+    "fullpage.js": "^3.1.1",
+    "geolib": "^3.3.3",
+    "google-map-react": "^2.1.9",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.21",
+    "mixitup": "^3.3.1",
+    "next-images": "^1.7.0",
+    "next-sitemap": "^1.6.99",
+    "react-google-recaptcha": "^2.1.0",
+    "react-gtm-module": "^2.0.11",
+    "react-multi-carousel": "^2.6.2",
+    "react-scroll": "^1.8.2",
+    "react-xmasonry": "^3.0.5",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2"
   }
 }

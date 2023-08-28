@@ -1,0 +1,465 @@
+@import '../mixins';
+@import '../animation';
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 36.63px;
+  font-weight: 700;
+  margin-bottom: 48px;
+    
+  @media screen and (max-width: $md-max) {
+    font-size: 20px;
+    line-height: 24.42px;
+    margin-top: 12px;
+    margin-bottom: 22px;
+  }
+
+  span {
+    @media screen and (max-width: $md-max) {
+      width: 50%;
+      display: block ;
+    }
+  }
+}
+
+.cover-photo {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $md-max) {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.info-row {
+  margin-bottom: 20px;
+
+  @media screen and (max-width: $md-max) {
+    padding: 0;
+    margin-bottom: 0;
+    width: 100%;
+
+    > div {
+      margin: 0;
+
+      > div:nth-child(1) {
+        padding: 0 14.5px;
+      }
+
+      > div:nth-child(2) {
+        padding: 0;
+      }
+    }
+  }
+
+  .info-container {
+    .info-box {
+      display: flex;
+      align-items: flex-start;
+      padding: 15px 0;
+      border-bottom: 0.25px solid $primary-light;
+
+      .info-title {
+        width: 50%;
+        font-size: 14px;
+        line-height: 17.09px;
+        font-weight: 700;
+      }
+
+      .info-detail {
+        width: 50%;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+
+    .desc-box {
+      text-align: justify;
+      padding: 20px 0;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    @media screen and (max-width: $md-max) {
+      margin-bottom: 50px;
+    }
+  }
+
+  .first-photo {
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $md-max) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.photos {
+  margin-bottom: 37px;
+
+  @media screen and (max-width: $md-max) {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: $md-max) {
+      margin-bottom: 50px;
+    }
+  }
+
+  @media screen and (max-width: $md-max) {
+    padding: 0;
+  }
+}
+
+.products {
+  &-title {
+    font-weight: 700;
+    font-size:  1rem;
+    line-height: 19.54px;
+    margin-bottom: 33px;
+
+    @media screen and (max-width: $md-max) {
+      font-size: 14px;
+      line-height: 17.09px;
+      margin-bottom: 34px;
+    }
+  }
+
+  &-carousel {
+    margin-bottom: 57px;
+
+    @media screen and (max-width: $md-max) {
+      margin-bottom: 56px;
+    }
+
+    .product {
+      height: 350px;
+      width: 100%;
+      border-radius: 5px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 21px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+      &:hover {
+        .overlay,
+        .title,
+        .info {
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: $md-max) {
+        height: 209px;
+        margin-bottom: 6px;
+
+        .overlay,
+        .title,
+        .info {
+          display: none;
+        }
+      }
+  
+      * {
+        color: $text-secondary;
+      }
+  
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $primary-light;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        opacity: 0;
+        border-radius: 5px;
+        transition: all .2s linear;
+      }
+  
+      .title {
+        font-weight: 700;
+        font-size: 0.875rem;
+        line-height: 18px;
+        margin-bottom: 6px;
+        z-index: 1;
+        opacity: 0;
+        transition: all .2s linear;
+
+        @media screen and (max-width: $md-max) {
+          font-size: 14px;
+          line-height: 18px;
+          margin-bottom: 7px;
+        }
+      }
+  
+      .info {
+        font-size: 0.75rem;
+        line-height: 11.93px;
+        margin-bottom: 5px;
+        z-index: 1;
+        opacity: 0;
+        transition: all .2s linear;
+
+        @media screen and (max-width: $md-max) {
+          font-size: 10px;
+          line-height: 11.93px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .mobile-code {
+      color: $text-primary;
+      font-size: 8px;
+      line-height: 7.16px;
+      margin-bottom: 5px;
+      display: none;
+
+      @media screen and (max-width: $md-max) {
+        display: block;
+      }
+    }
+
+    .mobile-title {
+      color: $text-primary;
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 9.77px;
+      display: none;
+
+      @media screen and (max-width: $md-max) {
+        display: block;
+      }
+    }
+  }
+}
+
+.slider {
+  flex-wrap: nowrap;
+
+  &-items {
+    &:nth-child(1) {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+
+.projects {
+  width: 100%;
+
+  * {
+    text-transform: uppercase;
+  }
+
+  .title-box {
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 19.54px;
+    margin-bottom: 26px;
+  
+    @media screen and (max-width: $md-max) {
+      font-size: 14px;
+      line-height: 17.09px;
+    }
+  }
+
+  .photo-box {
+  
+    @media screen and (max-width: $md-max) {
+      display: none;
+
+      .column {
+        padding: 0;
+      }
+    }
+
+    .column {
+      max-height: 380px;
+      margin-bottom: 40px ;
+    }
+
+    .photo {
+      display: block;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      border-radius: 5px;
+  
+      @media screen and (max-width: $md-max) {
+        margin-bottom: 14px;
+      }
+
+      &:hover {
+        img {
+          filter: grayscale(0%);
+        }
+
+        .text {
+          opacity: 1;
+        }
+      }
+
+      img {
+        filter: grayscale(100%);
+        transition: all .2s linear;
+  
+        @media screen and (max-width: $md-max) {
+          filter: grayscale(0%);
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        background-color: $primary-light;
+        height: 100%;
+        width: 100%;
+  
+        @media screen and (max-width: $md-max) {
+          height: 100%;
+        }
+      }
+
+      .date {
+        position: absolute;
+        top: 29px;
+        opacity: 0;
+        transition: all .2s linear;
+  
+        @media screen and (max-width: $md-max) {
+          opacity: 1;
+        }
+
+        span {
+          color: $text-secondary;
+          font-size: 12px;
+          line-height: 13.8px;
+        }
+      }
+
+      .type {
+        position: absolute;
+        bottom: 23px;
+        opacity: 0;
+        transition: all .2s linear;
+  
+        @media screen and (max-width: $md-max) {
+          opacity: 1;
+        }
+
+        span {
+          color: $text-secondary;
+          font-size: 12px;
+          line-height: 13.8px;
+        }
+      }
+
+      .text {
+        position: absolute;
+        bottom: 23px;
+        opacity: 0;
+        transition: all .2s linear;
+  
+        @media screen and (max-width: $md-max) {
+          opacity: 1;
+          bottom: 34px;
+        }
+
+        span {
+          color: $text-secondary;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 18.4px;
+        }
+      }
+    }
+  }
+
+  .mobile-carousel {
+    display: none;
+  
+    @media screen and (max-width: $md-max) {
+      display: block;
+      margin-bottom: 60px;
+    }
+
+    .project {
+      height: 371px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      border-radius: 5px;
+
+      * {
+        color: $text-secondary;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $primary-light;
+        height: 100%;
+        width: 100%;
+        z-index: 0;
+        border-radius: 5px;
+      }
+
+      .title {
+        width: 50%;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 7px;
+        z-index: 1;
+      }
+
+      .info {
+        width: 50%;
+        font-size: 10px;
+        line-height: 11.93px;
+        margin-bottom: 5px;
+        z-index: 1;
+      }
+    }
+  }
+}
