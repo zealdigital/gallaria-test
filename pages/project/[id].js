@@ -123,9 +123,7 @@ export async function getStaticPaths() {
   const response = await request(queryProjectPaths)
   const { getAllProjects } = (response.data || {}).data
 
-  const paths = await getAllProjects.map(project => ({
-    params: { id: project._id }
-  }))
+  const paths = ["/project/60a34a31bacaa30015744e4e", "/project/60fa4509b5ab740015d75284"]
 
   return {
     paths,
